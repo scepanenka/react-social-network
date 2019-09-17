@@ -1,0 +1,10 @@
+
+.header {
+  grid-area: h;
+  background-color: aquamarine;
+  padding: 4px;
+}
+
+.logo {
+  max-height: 50px;
+}
