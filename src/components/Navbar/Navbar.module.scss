@@ -1,0 +1,16 @@
+.nav {
+  grid-area: n;
+  background-color: #e0f5cb;
+  padding: 10px 0 0 10px;
+  a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      color: darkorange;
+    }
+    &.activeLink {
+      color:steelblue;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 .post {
-  color: azure;
-  background-color: darkcyan;
-  margin-top: 10px;
+  color: darkcyan;
+  padding: 10px;
+  margin-top: 2px;
+  background-color: azure;
 }

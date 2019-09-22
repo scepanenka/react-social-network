@@ -2,14 +2,15 @@ import React from 'react'
 import s from './MyPosts.module.css'
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+  let postsElements = (props.posts).map(p => <Post message={p.message}/>);
+
     return (
         <div>
-            <Post message='Lorem ipsum dolor sit amet, consectetur adipisicing elit. '/>
-            <Post message={'Animi asperiores cupiditate delectus eos expedita facilis\n' +
-            '    id, illum in ipsum laborum natus, nostrum sunt totam unde vel. Assumenda quae repudiandae ullam.'}/>
+          {postsElements}
         </div>
     )
-}
+};
 
 export default MyPosts;

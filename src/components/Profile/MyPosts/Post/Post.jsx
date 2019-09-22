@@ -7,6 +7,6 @@ const Post = (props) => {
         {props.message}
     </div>
   )
-}
+};
 
 export default Post;

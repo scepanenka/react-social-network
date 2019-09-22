@@ -1,10 +1,11 @@
 
 .header {
-  grid-area: h;
-  background-color: aquamarine;
-  padding: 4px;
+    grid-area: h;
+    background-color: #2b2b2b;
+    color: #ededed;
+    padding: 4px;
 }
 
 .logo {
-  max-height: 50px;
+    max-height: 50px;
 }
