@@ -1,13 +1,19 @@
 .header {
+    display: flex;
     grid-area: h;
     background-color: #2c2b3e;
-    padding: 4px;
+    padding-left: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
 }
 
 .title {
+    display: inline-block;
     color: #ededed;
+    margin: 0 auto;
 }
 
 .logo {
-    max-height: 50px;
+    max-height: 40px;
 }
