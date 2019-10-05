@@ -2,7 +2,7 @@ import React from "react";
 import s from './Dialogs.module.scss';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {SendMessageCreator, UpdateNewMessageTextCreator} from "../../Redux/state";
+import {SendMessageActionCreator, UpdateNewMessageTextCreator} from "../../Redux/dialogs-reducer";
 
 const Dialogs = (props) => {
   let state = props.store.getState().dialogsPage;
@@ -16,7 +16,7 @@ const Dialogs = (props) => {
   };
 
   let onSendMessageClick = () => {
-    props.store.dispatch(SendMessageCreator());
+    props.store.dispatch(SendMessageActionCreator());
   };
 
 
