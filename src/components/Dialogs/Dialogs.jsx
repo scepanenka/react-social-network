@@ -2,21 +2,21 @@ import React from "react";
 import s from './Dialogs.module.scss';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {SendMessageActionCreator, UpdateNewMessageTextCreator} from "../../Redux/dialogs-reducer";
+import Button from "@material-ui/core/Button";
 
 const Dialogs = (props) => {
-  let state = props.store.getState().dialogsPage;
+  let state = props.dialogsPage;
   let dialogElements = (state.dialogs).map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
   let messagesElements = (state.messages).map(message => <Message id={message.id} message={message.message}/>);
   let newMessageText = state.newMessageText;
 
   let onNewMessageChange = (e) => {
     let newText = e.target.value;
-    props.store.dispatch(UpdateNewMessageTextCreator(newText));
+    props.updateNewMessageText(newText);
   };
 
   let onSendMessageClick = () => {
-    props.store.dispatch(SendMessageActionCreator());
+    props.sendMessage();
   };
 
 
@@ -33,7 +33,7 @@ const Dialogs = (props) => {
                     placeholder='Enter your message'
                     cols="20" rows="5"/>
         </div>
-        <button onClick={onSendMessageClick}>Send message</button>
+        <Button onClick={onSendMessageClick} variant="contained" color="primary">Send message</Button>
       </div>
     </div>
   )
